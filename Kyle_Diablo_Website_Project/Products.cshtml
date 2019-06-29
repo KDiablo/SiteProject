@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>| Tough Pup | Products </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+    <script src="~/Scripts/FuncLib.js"></script>
+</head>
+<body>
+    <section class="row" id="titlebar">
+        <div class="col-md-4 col-md-offset-1">
+            <h1>| Tough Pup |</h1>
+            <h4>| The toughest toys for the toughest dogs |</h4>
+        </div>
+        <section class="col-md-2 col-md-offset-4">
+
+            <section class="btn-group" role="group" aria-label="cart or Sign up or log in">
+                <button class="btn btn-default" onclick="location.href = '/SignIn.cshtml';" id="btncart" name="btncart">
+                    Cart
+                    <span class="badge badge-info">0</span>
+                </button>
+                <button type="button" onclick="location.href = '/SignIn.cshtml';" name="login" class="btn btn-primary">Log In</button>
+                <button type="button" onclick="location.href = '/SignUp.cshtml';" name="signup" class="btn btn-default">Sign Up</button>
+            </section>
+        </section>
+    </section>
+    <br />
+    <br />
+    <nav>
+        <section class="row">
+            <div class="col-md-4 col-md-offset-1">
+                <button class="btn btn-primary btn-lg" onclick="location.href='/Home.cshtml';">Home</button>
+                <button class="btn btn-secondary btn-lg" >Products</button>
+                <button class="btn btn-primary btn-lg" onclick="location.href = '/AboutUs.cshtml';">About Us</button>
+                <button class="btn btn-primary btn-lg" onclick="location.href = '/Contact.cshtml';">Contact</button>
+            </div>
+        </section>
+    </nav>
+    <br />
+    <br />
+    <aside class="contentcontainer" style="width:20%; margin-left:20px; padding:20px; display:inline-block; vertical-align:top; ">
+        <form action="~/Products.cshtml" method="get">
+            <label>Sort By: </label><br />
+            <select id="sortby" name="sortby" class="form-control">
+                <option selected>Alphabetically Ascending</option>
+                <option>Alphabetically Descending</option>
+                <option>Newest First</option>
+                <option>Oldest First</option>
+                <option>Price highest to lowest</option>
+                <option>Price lowest to highest</option>
+            </select>
+            <br />
+            <input type="submit" name="submitsort" class="btn btn-primary" value="Sort" />
+        </form>
+        <hr />
+        <form action="~/Products.cshtml" method="get">
+            <label for="searchfor">Search for a product: </label><br />
+            <input type="text" name="searchfor" id="searchfor" class="form-control"/><br />
+            <input type="submit" name="submitsearch" value="Search" class="btn btn-primary" onclick="verifyProductSearch()"/>
+        </form>
+    </aside>
+    <section class="contentcontainer" style="width:70%; display:inline-block; margin-left:30px; padding:20px; vertical-align:top">
+        @{
+            //this will become a foreach loop that will loop through all the products in the database that meet the criteria for the user filtering and display them
+            //for now, it is to display some placeholders
+            for (int i = 0; i < 10; i++)
+            {
+                <section class="contentcontainer" style="margin:auto; width:90%; padding:10px;">
+                    <section class="productimg" style="width:200px; height:200px; display:inline-block; vertical-align:top">
+                        <img class="product" src="~/Images/comingsoon.png" />
+                    </section>
+                    <section id="description" style="width:60%; display:inline-block; vertical-align:top">
+                        <a href="~/ProductPage.cshtml"><h4>Product Name</h4></a>
+                        <p>Description...</p>
+                        <p>$100.00</p>               
+                    </section>
+                </section>
+                <hr />
+            }
+        }
+
+    </section>
+    
+    <footer>
+        Website created by Kyle Diablo. All rights reserved <a href="#" style="color:white">Back to top</a>
+    </footer>
+
+</body>
+</html>

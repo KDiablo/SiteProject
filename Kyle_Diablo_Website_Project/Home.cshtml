@@ -1,0 +1,92 @@
+﻿@{
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>| Tough Pup | Home</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="row" id="titlebar">
+        <div class="col-md-4 col-md-offset-1">
+            <h1>| Tough Pup |</h1>
+            <h4>| The toughest toys for the toughest dogs |</h4>
+        </div>
+        <section class="col-md-2 col-md-offset-4">
+        
+            <section class="btn-group" role="group" aria-label="cart or Sign up or log in">
+                <button class="btn btn-default" onclick="location.href = '/SignIn.cshtml';" id="btncart" name="btncart">Cart
+                    <span class="badge badge-info">0</span></button>
+                <button type="button" onclick="location.href = '/SignIn.cshtml';" name="login" class="btn btn-primary">Log In</button>
+                <button type="button" onclick="location.href = '/SignUp.cshtml';" name="signup" class="btn btn-default">Sign Up</button>
+            </section>
+        </section>
+    </section>
+    <br />
+    <br />
+    <nav>
+        <section class="row">
+            <div class="col-md-4 col-md-offset-1">
+                <button class="btn btn-secondary btn-lg" href="">Home</button>
+                <button class="btn btn-primary btn-lg" onclick="location.href = '/Products.cshtml';">Products</button>
+                <button class="btn btn-primary btn-lg" onclick="location.href = '/AboutUs.cshtml';">About Us</button>
+                <button class="btn btn-primary btn-lg" onclick="location.href = '/Contact.cshtml';">Contact</button>
+            </div>    
+        </section>
+    </nav>
+
+    <br />
+    <br />
+
+    <section class="jumbotron contentcontainer" style="width:65%; margin:auto; padding: 20px">
+        <h2 class="display-4">Deal of the Week</h2>
+        <hr class="my-4">
+        <section class="productimg" style="width:200px; height:200px; display:inline-block; vertical-align:top">
+            <img class="product" src="~/Images/comingsoon.png" />
+        </section>
+        <section id="description" style="width:60%; display:inline-block; vertical-align:top">
+            <p>This is a placeholder for the deal of the week.</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" onclick="location.href = '/ProductPage.cshtml';" role="button">Check it out!</a>
+            </p>
+        </section>      
+    </section>
+    <br />
+    <section class="contentcontainer" style="padding:20px; width:65%; margin:auto">
+        <h3>Recent Product Stress Tests</h3>
+        <br />
+        <a href="https://youtu.be/iQ0XfMRsAG0" target="_blank"><h4>Is Kong KING of dog toys? - Dog Toy Reviews | Kong Traxx</h4></a>
+        <p>This week's dog toy review we're testing our first Kong dog toy and this one is shaping up to be one of the best! </p>  
+        <hr />
+        <a href="https://youtu.be/B2pBEkLLAp4" target="_blank"><h4>West Paw Design's Toppl Dog Toy Review - MyDogLikes</h4></a>
+        <p>Harley and Charlie from MyDogLikes test out the Toppl from West Paw Design!</p>
+        
+        <hr />
+        <a href="https://youtu.be/4Q0xtmdLrqM" target="_blank"><h4>How ULTIMATE is this dog toy? - Dog Toy Reviews | Tuffy's Ultimate Bone Toy</h4></a>
+        <p>This week's dog toy review for aggressive chewers, we test the Tuffy Ultimate Bone dog toy and set the benchmark for future episodes.</p>
+        
+        <hr />
+        <a href="https://youtu.be/DBDRZNRnXlg" target="_blank"><h4>Tether Tug Interactive Dog Toy Review</h4></a>
+        <p>Does your dog love to tug? Our chocolate Labrador thinks it's the best game there is. She carries around toys all the time hoping that one of our other dogs or a human
+        member of our family will play with her. Thanks to the Tether Tug, now she can play anytime she wants.</p>
+        
+    </section>
+    <br />
+    <br />
+
+    <footer>
+        Website created by Kyle Diablo. All rights reserved
+    </footer>
+</body>
+</html>

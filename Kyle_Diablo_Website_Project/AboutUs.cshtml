@@ -1,0 +1,73 @@
+﻿@{
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>| Tough Pup | About Us</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="row" id="titlebar">
+        <div class="col-md-4 col-md-offset-1">
+            <h1>| Tough Pup |</h1>
+            <h4>| The toughest toys for the toughest dogs |</h4>
+        </div>
+        <section class="col-md-2 col-md-offset-4">
+
+            <section class="btn-group" role="group" aria-label="cart or Sign up or log in">
+                <button class="btn btn-default" onclick="location.href = '/SignIn.cshtml';" id="btncart" name="btncart">
+                    Cart
+                    <span class="badge badge-info">0</span>
+                </button>
+                <button type="button" onclick="location.href = '/SignIn.cshtml';" name="login" class="btn btn-primary">Log In</button>
+                <button type="button" onclick="location.href = '/SignUp.cshtml';" name="signup" class="btn btn-default">Sign Up</button>
+            </section>
+        </section>
+    </section>
+    <br />
+    <br />
+    <nav>
+        <section class="row">
+            <div class="col-md-4 col-md-offset-1">
+                <button class="btn btn-primary btn-lg" onclick="location.href='/Home.cshtml';">Home</button>
+                <button class="btn btn-primary btn-lg" onclick="location.href = '/Products.cshtml';">Products</button>
+                <button class="btn btn-secondary btn-lg">About Us</button>
+                <button class="btn btn-primary btn-lg" onclick="location.href = '/Contact.cshtml';">Contact</button>
+            </div>
+        </section>
+    </nav>
+    <br />
+    <br />
+    <article class="contentcontainer" style="width:45%; margin-left:20px; padding:30px; display:inline-block">
+        <h3>Our Purpose...</h3>
+        <p>
+            ... is to provide dog owners peace of mind that they are investing in a high quality product that will sill stand up to the toughest playtimes that you and your pup can throw at it.       
+        </p>
+        <h3>Why spend more on a tougher dog toy? Won't it just end up ruined anyway?</h3>
+        <p>
+            Low quallity, cheap dog toys run the risk of being ripped up and choked on by either your dog or a small child which can result in a pricey vet/hospital bill, <i>best case secenario</i>.
+            Not to mention, you'll be finding toy scraps and stuffing for days after being ripped apart, creating unsightly messes in your home. A high-quality dog toy should last for weeks or
+            longer under the toughest conditions.
+        </p>
+    </article>
+    <article class="productimg" style="height:500px; width:40%; float:right; margin-right:50px">
+        <img style="" src="~/Images/dog1.jpeg" />
+    </article>
+
+    <footer>
+        Website created by Kyle Diablo. All rights reserved
+    </footer>
+
+
+</body>
+</html>

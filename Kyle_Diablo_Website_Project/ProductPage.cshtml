@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>| Tough Pup | Selected Product </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+    <script src="~/Scripts/FuncLib.js"></script>
+</head>
+<body>
+    <section class="row" id="titlebar">
+        <div class="col-md-4 col-md-offset-1">
+            <h1>| Tough Pup |</h1>
+            <h4>| The toughest toys for the toughest dogs |</h4>
+        </div>
+        <section class="col-md-2 col-md-offset-4">
+            <section class="btn-group" role="group" aria-label="cart or Sign up or log in">
+                <button class="btn btn-default" onclick="location.href = '/SignIn.cshtml';" id="btncart" name="btncart">
+                    Cart
+                    <span class="badge badge-info">0</span>
+                </button>
+                <button type="button" onclick="location.href = '/SignIn.cshtml';" name="login" class="btn btn-primary">Log In</button>
+                <button type="button" onclick="location.href = '/SignUp.cshtml';" name="signup" class="btn btn-default">Sign Up</button>
+            </section>
+        </section>
+    </section>
+    <br />
+    <br />
+    <nav>
+        <section class="row">
+            <div class="col-md-4 col-md-offset-1">
+                <button class="btn btn-primary btn-lg" onclick="location.href='/Home.cshtml';">Home</button>
+                <button class="btn btn-primary btn-lg" onclick="location.href = '/Products.cshtml';">Products</button>
+                <button class="btn btn-primary btn-lg" onclick="location.href = '/AboutUs.cshtml';">About Us</button>
+                <button class="btn btn-primary btn-lg" onclick="location.href = '/Contact.cshtml';">Contact</button>
+            </div>
+        </section>
+    </nav>
+    <br />
+    <br />
+    <section class="contentcontainer" style="width:60%; margin:auto; padding-left:30px; padding-top:20px; padding-bottom:20px">
+        <section class="productimg" style="width:400px; height:400px; display:inline-block; vertical-align:top">
+            <img class="product" src="~/Images/comingsoon.png" />
+        </section>
+        <section id="description" style="display: inline-block; vertical-align:top; padding-left:30px;">
+            <h3>Product Name</h3>
+            <p>Description of the selected product will go here.</p>
+            <h4 style="color:darkred"><b>$19.99</b></h4>
+            <section style="width:25%">
+                <form action="~/ProductPage.cshtml" method="get">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" name="quantity" id="quantity" class="form-control" value="0" /><br />
+                    <input type="submit" class="btn btn-primary" name="submitcart" value="Add to Cart" />
+                </form>
+            </section>
+        </section>
+    </section>
+
+    <footer>
+        Website created by Kyle Diablo. All rights reserved
+    </footer>
+</body>
+</html>
